@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: rgb(0, 110, 255);
+    --primary-color: rgb(53, 139, 252);
     --font-white-color: rgb(247, 247, 247);
     font-family: "Roboto", sans-serif; 
 }
@@ -15,6 +15,10 @@ a {
     color: var(--font-white-color);
 }
 
+svg {
+    width: 1.3rem;
+}
+
 ul {
     list-style: none;
 }
@@ -22,44 +26,47 @@ ul {
 .container {
     display: grid;
     grid-template-columns: 1fr 6fr;
+    row-gap: 3em;
 }
 
-.sidebar {
-    grid-row: 1 / 3;
-    background-color: var(--primary-color);
-    color: var(--font-white-color);
-    font-size: 1.3rem;
-    font-weight: 700;
+.main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding-left: 2em;
+    gap: 1em;
+}
+
+.main .main-right-content {
+    grid-column: 3 / 4;
+    grid-row: 1;
+}
+
+.main .main-left-content {
+    
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+
+.card {
+    border-left: 8px solid #f0b429;
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+    gap: 1em;
+    height: 250px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding: 1em;
 }
 
-.sidebar .logo {
-    font-size: 1.9rem;
-    display: flex;
-    align-items: center;
+.card-icons {
+    
+    margin-left: auto;
 }
 
-.sidebar .logo svg {
-    fill: var(--font-white-color);
-    width: 3rem;
-    margin-right: 10px;
-}
-
-.sidebar > * {
-    margin-bottom: 2em;
-}
-
-.sidebar ul li {
-    margin-bottom: 0.5em;
-}
-
-.sidebar ul li a {
-    display: flex;
-}
-
-.sidebar ul li a svg {
-    width: 1.3rem;
-    fill: var(--font-white-color);
-    margin-right: 1em;
+.card .card-title {
+    font-weight: 700;
 }
 
