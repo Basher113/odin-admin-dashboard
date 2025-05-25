@@ -6,8 +6,8 @@
     font-weight: 700;
     padding: 1em;
     display: grid;
-    grid-template-rows: 70px 1fr 2fr;
-    row-gap: 2em;
+    grid-template-rows: 70px 290px 1fr;
+    row-gap: 10px;
 }
 
 .sidebar .logo {
@@ -24,8 +24,7 @@
 }
 
 .sidebar ul {
-    padding-left: 0.8em;
-
+    padding-left: 0.5em;
 }
 
 .sidebar ul li {
@@ -33,7 +32,10 @@
 }
 
 .sidebar ul li a {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5rem 1fr;
+    align-items: center;
+    gap: 10px;
 }
 
 .sidebar ul li a svg {
